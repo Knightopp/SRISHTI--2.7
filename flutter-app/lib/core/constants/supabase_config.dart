@@ -11,17 +11,16 @@
 class SupabaseConfig {
   SupabaseConfig._();
 
-  /// The Supabase Project URL provided via --dart-define=SUPABASE_URL=...
   static const String supabaseUrl = String.fromEnvironment(
     'SUPABASE_URL',
-    defaultValue: '',
+    defaultValue: 'https://sdkadflrxjdhxduwvrsz.supabase.co',
   );
 
   /// The Supabase Publishable (anon) Key provided via --dart-define=SUPABASE_PUBLISHABLE_KEY=...
   /// (also supports SUPABASE_ANON_KEY as fallback)
   static const String supabasePublishableKey = String.fromEnvironment(
     'SUPABASE_PUBLISHABLE_KEY',
-    defaultValue: String.fromEnvironment('SUPABASE_ANON_KEY', defaultValue: ''),
+    defaultValue: String.fromEnvironment('SUPABASE_ANON_KEY', defaultValue: 'sb_publishable_WQB6od9EydJmJ_RmqncFuw_KzBjwg1w'),
   );
 
   /// Returns true if both URL and Publishable Key were provided.
